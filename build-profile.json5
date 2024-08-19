@@ -1,6 +1,20 @@
 {
   "app": {
-    "signingConfigs": [],
+    "signingConfigs": [
+      {
+        "name": "default",
+        "type": "HarmonyOS",
+        "material": {
+          "certpath": "/Users/simple/.ohos/config/default_SpiderManHarmony_s6kgEXFpICZu4ovo4b8KWAbtJyHRq1ZwQf_MVp50o3Q=.cer",
+          "storePassword": "0000001BA2E6CE9040596CE3A5FA8889FBBBB82E8EB5DD47D0FEA53A620254697DB12793C99C0D8BBA9589",
+          "keyAlias": "debugKey",
+          "keyPassword": "0000001B2A924F8A3C52363B0EB129FE2FDF39736BAD42D5C36B873A506C9B8E6F4834E0EBF83E2A6C0BFE",
+          "profile": "/Users/simple/.ohos/config/default_SpiderManHarmony_s6kgEXFpICZu4ovo4b8KWAbtJyHRq1ZwQf_MVp50o3Q=.p7b",
+          "signAlg": "SHA256withECDSA",
+          "storeFile": "/Users/simple/.ohos/config/default_SpiderManHarmony_s6kgEXFpICZu4ovo4b8KWAbtJyHRq1ZwQf_MVp50o3Q=.p12"
+        }
+      }
+    ],
     "products": [
       {
         "name": "default",
@@ -30,6 +44,10 @@
           ]
         }
       ]
+    },
+    {
+      "name": "library",
+      "srcPath": "./library",
     }
   ]
 }

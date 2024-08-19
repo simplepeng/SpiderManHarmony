@@ -1,17 +1,19 @@
 @Entry
 @Component
 struct Index {
-  @State message: string = 'Hello World';
+  @State message: string = 'Crash';
 
   build() {
     RelativeContainer() {
       Text(this.message)
-        .id('HelloWorld')
         .fontSize(50)
         .fontWeight(FontWeight.Bold)
         .alignRules({
           center: { anchor: '__container__', align: VerticalAlign.Center },
           middle: { anchor: '__container__', align: HorizontalAlign.Center }
+        })
+        .onClick(() => {
+          JSON.parse('')
         })
     }
     .height('100%')
