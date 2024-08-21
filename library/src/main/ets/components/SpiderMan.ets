@@ -14,6 +14,12 @@ export class SpiderMan {
       onReceive: (domain: string, appEventGroups: Array<hiAppEvent.AppEventGroup>) => {
         console.error('onReceive')
 
+        if (appEventGroups.length < 1) {
+          console.error('appEventGroups.length < 1')
+          return
+        }
+
+
         router.pushNamedRoute({
           name: 'MainPage'
         }).then(() => {

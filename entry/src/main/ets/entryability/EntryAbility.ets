@@ -6,7 +6,6 @@ import { SpiderMan } from 'library';
 export default class EntryAbility extends UIAbility {
   onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
     hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onCreate');
-    SpiderMan.init(this.context);
   }
 
   onDestroy(): void {
@@ -23,7 +22,11 @@ export default class EntryAbility extends UIAbility {
         return;
       }
       hilog.info(0x0000, 'testTag', 'Succeeded in loading the content.');
+      setTimeout(() => {
+        SpiderMan.init(this.context);
+      }, 1000)
     });
+
   }
 
   onWindowStageDestroy(): void {
