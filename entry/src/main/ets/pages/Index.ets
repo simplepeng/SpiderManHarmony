@@ -5,9 +5,9 @@ struct Index {
 
   build() {
     RelativeContainer() {
-      Text(this.message)
-        .fontSize(50)
-        .fontWeight(FontWeight.Bold)
+      Button(this.message)
+        .fontSize(25)
+        .fontWeight(FontWeight.Medium)
         .alignRules({
           center: { anchor: '__container__', align: VerticalAlign.Center },
           middle: { anchor: '__container__', align: HorizontalAlign.Center }

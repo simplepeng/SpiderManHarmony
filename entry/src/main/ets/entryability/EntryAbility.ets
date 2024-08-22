@@ -22,9 +22,8 @@ export default class EntryAbility extends UIAbility {
         return;
       }
       hilog.info(0x0000, 'testTag', 'Succeeded in loading the content.');
-      setTimeout(() => {
-        SpiderMan.init(this.context);
-      }, 1000)
+
+      SpiderMan.init(this.context);
     });
 
   }

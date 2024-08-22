@@ -1,6 +1,7 @@
 import { hiAppEvent } from '@kit.PerformanceAnalysisKit'
 import { common } from '@kit.AbilityKit'
 import { router } from '@kit.ArkUI'
+import { Const } from './Const'
 
 export class SpiderMan {
   //
@@ -19,14 +20,16 @@ export class SpiderMan {
           return
         }
 
+        setTimeout(() => {
+          router.pushNamedRoute({
+            name: Const.CRASH_PAGE
+          }).then(() => {
+            console.error('pushNamedRoute then')
+          }).catch(() => {
+            console.error('pushNamedRoute catch')
+          })
+        }, 1000)
 
-        router.pushNamedRoute({
-          name: 'MainPage'
-        }).then(() => {
-          console.error('pushNamedRoute then')
-        }).catch(() => {
-          console.error('pushNamedRoute catch')
-        })
       },
     })
   }

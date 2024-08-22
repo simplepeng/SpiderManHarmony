@@ -1,6 +1,8 @@
-@Entry({ routeName: 'MainPage' })
+import { Const } from './Const';
+
+@Entry({ routeName: Const.CRASH_PAGE })
 @Component
-export struct MainPage {
+export struct CrashPage {
   @State message: string = 'Hello World';
 
   build() {

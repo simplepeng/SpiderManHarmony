@@ -1,2 +1,3 @@
-export { MainPage } from './src/main/ets/components/MainPage'
+export { CrashPage } from './src/main/ets/components/CrashPage'
+
 export { SpiderMan } from './src/main/ets/components/SpiderMan'
