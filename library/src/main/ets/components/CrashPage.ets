@@ -54,11 +54,11 @@ export struct SwiperPage {
       Column({ space: 10 }) {
         Item({ type: 'deviceType', message: this.deviceType })
         Item({ type: 'marketName', message: this.marketName })
-        Item2({ type: 'displayVersion', message: this.displayVersion })
+        Item({ type: 'displayVersion', message: this.displayVersion })
         Item({ type: 'osFullName', message: this.osFullName })
         Item({ type: 'abiList', message: this.abiList })
         Item({ type: 'sdkApiVersion', message: this.sdkApiVersion })
-        Item2({ type: 'ODID', message: this.ODID })
+        Item({ type: 'ODID', message: this.ODID })
         Divider()
         //
         Item({ type: 'version', message: this.version })
@@ -70,9 +70,9 @@ export struct SwiperPage {
         Item({ type: 'domain', message: this.eventInfo.domain })
         Item({ type: 'name', message: this.eventInfo.name })
         Item({ type: 'event_type', message: this.eventInfo.eventType.toString() })
-        Item({ type: 'time', message: this.eventInfo.params['time'] })
+        // Item({ type: 'time', message: this.eventInfo.params['time'] })
         Item({ type: 'crash_type', message: this.eventInfo.params['crash_type'] })
-        Item({ type: 'foreground', message: this.eventInfo.params['foreground'] })
+        // Item({ type: 'foreground', message: this.eventInfo.params['foreground'] })
         Item({ type: 'bundle_version', message: this.eventInfo.params['bundle_version'] })
         Item({ type: 'bundle_name', message: this.eventInfo.params['bundle_name'] })
         // Item({ type: 'pid', message: this.eventInfo.params['pid'] })
@@ -85,7 +85,12 @@ export struct SwiperPage {
         Item2({ type: 'Stacktrace', message: this.eventInfo.params['exception'].stack })
       }
       .alignItems(HorizontalAlign.Start)
+      .justifyContent(FlexAlign.Start)
+      .width(Const.FULL_PAGE)
+      .height(Const.FULL_PAGE)
     }
+    .width(Const.FULL_PAGE)
+    .height(Const.FULL_PAGE)
     .scrollable(ScrollDirection.Vertical)
     .padding({ left: 10, right: 10 })
   }
@@ -165,8 +170,12 @@ export struct Item {
   build() {
     Row() {
       Text(`${this.type}: `)
+        .fontColor('#cbcbcb')
       Text(this.message)
+        .fontColor('#e71e62')
+        .layoutWeight(1)
     }
+    .alignItems(VerticalAlign.Top)
   }
 }
 
@@ -178,7 +187,9 @@ export struct Item2 {
   build() {
     Column({ space: 5 }) {
       Text(`${this.type}: `)
+        .fontColor('#cbcbcb')
       Text(this.message)
+        .fontColor('#e71e62')
     }
     .alignItems(HorizontalAlign.Start)
   }
