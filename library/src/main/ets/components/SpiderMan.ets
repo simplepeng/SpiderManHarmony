@@ -20,9 +20,16 @@ export class SpiderMan {
           return
         }
 
+        if (appEventGroups.length > 1) {
+          return
+        }
+
+        //单个crash跳转
+        const appEventGroup = appEventGroups[0]
         setTimeout(() => {
           router.pushNamedRoute({
-            name: Const.CRASH_PAGE
+            name: Const.CRASH_PAGE,
+            params: appEventGroup
           }).then(() => {
             console.error('pushNamedRoute then')
           }).catch(() => {
