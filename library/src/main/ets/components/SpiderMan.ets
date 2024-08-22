@@ -12,7 +12,7 @@ export class SpiderMan {
         names: [hiAppEvent.event.APP_CRASH]
       }],
       onReceive: (domain: string, appEventGroups: Array<hiAppEvent.AppEventGroup>) => {
-        console.error('onReceive')
+        console.error('onReceive -- ' + domain)
 
         if (appEventGroups.length < 1) {
           console.error('appEventGroups.length < 1')
