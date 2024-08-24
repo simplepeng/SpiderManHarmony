@@ -23,9 +23,12 @@ export default class EntryAbility extends UIAbility {
       }
       hilog.info(0x0000, 'testTag', 'Succeeded in loading the content.');
     });
+    const isDebug = true
 
     //初始化SpiderMan
-    SpiderMan.init();
+    if (isDebug) {
+      SpiderMan.init();
+    }
   }
 
   onWindowStageDestroy(): void {
