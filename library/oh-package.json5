@@ -1,7 +1,7 @@
 {
   "name": "spider-man",
   "version": "1.0.0",
-  "description": "崩溃日志手机端显示 ，测试妹妹的最爱，开发哥哥的小棉袄。",
+  "description": "崩溃日志手机端显示，提高测试反馈效率。",
   "main": "Index.ets",
   "author": "simplepeng",
   "license": "Apache-2.0",
