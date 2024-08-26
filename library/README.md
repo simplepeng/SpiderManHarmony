@@ -5,7 +5,7 @@
 ## 如何安装
 
 ```shell
-ohpm install spider-man
+ohpm install @simplepeng/spider-man
 ```
 
 ## 如何使用
@@ -13,6 +13,8 @@ ohpm install spider-man
 在EntryAbility的`onWindowStageCreate`初始化`SpiderMan`，最好加`isDebug`判断，只在调试环境显示崩溃信息。
 
 ```typescript
+import { SpiderMan } from 'spider-man';
+
 if (isDebug) {
   SpiderMan.init();
 }
