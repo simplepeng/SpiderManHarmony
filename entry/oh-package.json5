@@ -6,7 +6,7 @@
   "author": "",
   "license": "",
   "dependencies": {
-    "library": "file:../library"
+//    "library": "file:../library"
   },
   "devDependencies": {},
   "dynamicDependencies": {}
