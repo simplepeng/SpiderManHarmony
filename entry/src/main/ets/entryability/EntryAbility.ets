@@ -1,8 +1,7 @@
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
 import { window } from '@kit.ArkUI';
-import { SpiderMan } from 'spider-man';
-
+import { SpiderMan } from '@simplepeng/spider-man';
 // import { SpiderMan } from 'library';
 
 export default class EntryAbility extends UIAbility {
